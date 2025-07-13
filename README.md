@@ -1,25 +1,24 @@
 
 
-```markdown
-# 👤 User Management Service
+
+User Management Service
 
 A RESTful API built with **Spring Boot** and **PostgreSQL** for managing users, roles, and authentication.
 
----
 
-## 🚀 Features
 
-- ✅ User registration and login
-- ✅ Role-based access control (Admin/User)
-- ✅ JWT authentication
-- ✅ CRUD operations for users
-- ✅ PostgreSQL database integration
-- ✅ Global exception handling
-- ✅ Swagger API documentation
+Features
 
----
+- User registration and login
+- Role-based access control (Admin/User)
+- JWT authentication
+- CRUD operations for users
+- PostgreSQL database integration
+- Global exception handling
+- Swagger API documentation
 
-## 🛠️ Tech Stack
+
+ 🛠️ Tech Stack
 
 | Layer        | Technology        |
 |--------------|------------------|
@@ -31,11 +30,10 @@ A RESTful API built with **Spring Boot** and **PostgreSQL** for managing users, 
 | Build Tool   | Maven            |
 | Containerization | Docker (optional) |
 
----
 
-## 🏗️ Project Structure
 
-```
+Project Structure
+
 
 src/
 ┣ main/
@@ -52,36 +50,31 @@ src/
 ┃     ┗ static/
 ┗ test/
 
-````
 
----
+ Getting Started
 
-## ⚙️ Getting Started
+1. Clone the Repository
 
-### 1. Clone the Repository
-
-```bash
+bash
 git clone https://github.com/yourusername/user-management-service.git
 cd user-management-service
-````
 
-### 2. Configure Database
+
+Configure Database
 
 Update your `application.yml`:
 
-```yaml
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/user_dev_db
     username: dev_user
     password: dev_password
-```
+
 
 Or set as environment variables.
 
----
 
-### 3. Run PostgreSQL with Docker
+ 3. Run PostgreSQL with Docker
 
 ```bash
 docker run --name user-postgres \
@@ -90,26 +83,24 @@ docker run --name user-postgres \
   -e POSTGRES_PASSWORD=dev_password \
   -p 5432:5432 \
   -d postgres:16
-```
 
----
 
-### 4. Build & Run the App
+4. Build & Run the App
 
 ```bash
 ./mvnw spring-boot:run
-```
+
 
 Or package:
 
-```bash
+bash
 ./mvnw clean install
 java -jar target/user-management-service.jar
-```
 
----
 
-## 🔑 API Endpoints
+
+
+API Endpoints
 
 | Method | Endpoint             | Description       |
 | ------ | -------------------- | ----------------- |
@@ -119,13 +110,12 @@ java -jar target/user-management-service.jar
 | PUT    | `/api/users/{id}`    | Update user       |
 | DELETE | `/api/users/{id}`    | Delete user       |
 
-✅ Protected routes require a valid JWT in the `Authorization: Bearer <token>` header.
+Protected routes require a valid JWT in the `Authorization: Bearer <token>` header.
 
 ---
 
-## 📦 Optional: Docker Compose Setup
+Optional: Docker Compose Setup
 
-```yaml
 # docker-compose.yml (simplified)
 version: '3.8'
 services:
@@ -137,21 +127,16 @@ services:
       POSTGRES_DB: user_dev_db
       POSTGRES_USER: dev_user
       POSTGRES_PASSWORD: dev_password
-```
 
----
-
-## 📚 Swagger UI
+Swagger UI
 
 Once the app is running, access documentation at:
 
-```
+
 http://localhost:8080/swagger-ui/index.html
-```
 
----
 
-## 🙌 Contributing
+Contributing
 
 Feel free to fork and submit pull requests. Feedback and contributions are always welcome!
 
